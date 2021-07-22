@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pomodoro Timer</title>
+    </head>
+    <body>
+        <div class="pomodoro">
+            <div class="pomodoro__container">
+                <div class="pomodoro__inner">
+                    <div class="pomodoro__title">
+                        <h1>Pomodoro Timer</h1>
+                    </div>
+                    <div class="pomodoro__timer">
+                        <div class="pomodoro__timer__container">
+                            <div class="pomodoro__timer__inner">
+                                <div class="pomodoro__timer__text">
+                                    <h2>
+                                        <%= minutesLeft + ":" + secondsLeft %>
+                                    </h2>
+                                </div>
+                                <div class="pomodoro__timer__dot">
+                                    <div class="pomodoro__timer__dot__inner">
+                                        <div class="pomodoro__timer__dot__text">
+                                            <h2>.</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pomodoro__controls">
+                        <div class="pomodoro__controls__container">
+                            <div class="pomodoro__controls__inner">
+                                <div class="pomodoro__controls__button">
+                                    <button
+                                        class="
+                                            pomodoro__controls__button__inner
+                                        "
+                                    >
+                                        <span
+                                            class="
+                                                pomodoro__controls__button__text
+                                                start
+                                            "
+                                        >
+                                            Start
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="pomodoro__controls__button">
+                                    <button
+                                        class="
+                                            pomodoro__controls__button__inner
+                                        "
+                                    >
+                                        <span
+                                            class="
+                                                pomodoro__controls__button__text
+                                            "
+                                        >
+                                            Stop
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
