@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/cats", (req, res) => {
-    const cats = ["Blue", "Miaui", "Tony", "Purrboy"];
+    const cats = ["Blue", "Rocket", "Monty", "Stephanie", "Winston"];
     res.render("cats", { cats });
 });
 
@@ -27,32 +27,11 @@ app.get("/r/:subreddit", (req, res) => {
     }
 });
 
-app.get("/random", (req, res) => {
-    const rand = Math.floor(Math.random() * 10) + 1;
-    const isEven = rand % 2 === 0;
-    res.render("random", { rand, isEven });
+app.get("/rand", (req, res) => {
+    const num = Math.floor(Math.random() * 10) + 1;
+    res.render("random", { num });
 });
 
-// app.get("/pomodoro", (req, res) => {
-//     let minutesLeft = 25;
-//     let secondsLeft = "0" + ((25 * 60) % 60);
-//     const pomodoro = () => {
-//         const start = Date.now();
-//         const end = start + 25 * 60 * 1000;
-//         const interval = setInterval(() => {
-//             const now = Date.now();
-//             if (now >= end) {
-//                 clearInterval(interval);
-//                 console.log("end");
-//             } else {
-//                 secondsLeft = Math.round((end - now) / 1000);
-//                 minutesLeft = Math.floor(secondsLeft / 60);
-//             }
-//         }, 1000);
-//     };
-//     res.render("pomodoro", { pomodoro, secondsLeft, minutesLeft });
-// });
-
-const port = process.env.PORT || 3000;
-
-app.listen(port, () => console.log(`listening on port ${port}`));
+app.listen(3000, () => {
+    console.log("LISTENING ON PORT 3000");
+});
